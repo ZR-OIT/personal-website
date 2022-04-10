@@ -146,6 +146,7 @@
 		height: 75vh;
 		margin:  0px auto;
 		min-height: 500px;
+		background-color: lightblue;
 	}
 
 		#desktop-layout {
@@ -155,7 +156,6 @@
 		#mobile-layout {
 			display: flex;
 			flex-flow: column;
-			width: 100%;
 		}
 
 			#mobile-topbar {
