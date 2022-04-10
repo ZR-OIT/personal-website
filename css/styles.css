@@ -47,7 +47,17 @@
 		font-weight: 400;
 		margin: 0;
 	}
-	/*
+
+	h3 {
+		color: var(--default-heading-color);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 1.5em;
+		font-style: normal;
+		font-weight: 400;
+		margin: 0;
+		padding-top: 16px;
+	}
+	
 	figure {
 		display: flex;
 		flex-flow: column;
@@ -56,16 +66,24 @@
 	figure img {
 		max-width: 100%;
 	}
-
+	
 	figure figcaption {
 		align-self: center;
 		color: var(--default-heading-color);
 		font-family: "Quicksand", sans-serif;
-		font-size: 1.5em;
-		font-style: normal;
+		font-size: 1em;
+		font-style: italic;
 		font-weight: 300;
 	}
-	*/
+
+	li {
+		color: var(--default-text-color);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 0.9em;
+		font-style: normal;
+		font-weight: 400;
+		padding-right: 16px;
+	}
 
 	/****************************************************************/
 
@@ -153,9 +171,9 @@
 	main { 
 		background-color: var(--bg-color);
 		display: flex;
-		height: 75vh;
+		/*height: 75vh;*/
 		margin:  0px auto;
-		min-height: 500px;
+		/*min-height: 500px;*/
 	}
 
 		#desktop-layout {
@@ -234,7 +252,23 @@
 
 			#mobile-main-content {
 				display: flex;
+				flex-flow: column;
+				width: 100%;
 			}
+
+				#about-me-heading {
+					text-align: center;
+					text-decoration: underline;
+				}
+
+				#projects-call-to-action {
+					display: flex;
+					font-size: 1.25em;
+					justify-items: center;
+					padding-bottom: 16px;
+					text-align: center;
+					width: 95%;
+				}
 
 	/****************************************************************/
 
