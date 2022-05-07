@@ -74,6 +74,7 @@
 		font-size: 1em;
 		font-style: italic;
 		font-weight: 300;
+		text-align: center;
 	}
 
 	li {
@@ -261,15 +262,35 @@
 					text-decoration: underline;
 				}
 
-				#projects-call-to-action {
+				#about-me-list {
+					font-size: 1.25em;
+				}
+
+				#projects-cta-container {
 					align-self: center;
 					display: flex;
-					font-size: 1.25em;
 					justify-content: center;
-					padding-bottom: 16px;
+					margin-bottom: 8px;
 					text-align: center;
 					width: 95%;
 				}
+
+					#projects-cta {
+						font-family: "Quicksand", sans-serif;
+						font-size: 1.2em;
+						font-style: normal;
+						font-weight: 400;
+						margin: 0;
+					}
+
+					#projects-link {
+						color:  var(--primary-color);
+						font-family: "Quicksand", sans-serif;
+						font-size: 1.2em;
+						font-style: normal;
+						font-weight: 400;
+						margin: 0;
+					}
 
 	/****************************************************************/
 
