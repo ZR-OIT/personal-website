@@ -42,7 +42,7 @@
 	h2 {
 		color: var(--heading-two-color);
 		font-family:  "Quicksand", sans-serif;
-		font-size: 1.5em;
+		font-size: 1em;
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
@@ -262,9 +262,10 @@
 				}
 
 				#projects-call-to-action {
+					align-self: center;
 					display: flex;
 					font-size: 1.25em;
-					justify-items: center;
+					justify-content: center;
 					padding-bottom: 16px;
 					text-align: center;
 					width: 95%;
@@ -276,9 +277,9 @@
 		align-items: center;
 		background: var(--primary-color);
 		display: flex;
-		height: 10vh;
 		justify-content: center;
-		min-height: 1.5em;
+		min-height: 64px;
+		text-align: center;
 	}
 
 		#footer-text {
