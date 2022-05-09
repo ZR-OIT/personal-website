@@ -37,7 +37,7 @@
 						<a href="#" class="nav-button">PROJECTS</a>
 						<a href="#" class="nav-button">3D PRINTING</a>
 					</div><div id="mobile-nav">
-						<a href="#" id="mobile-nav-button"><img id="dropdown-icon" src="img/drop-down-icon.png" alt="Dropdown list icon"></a>
+						<a id="mobile-nav-button" onclick="toggleDropdown()"><img id="dropdown-icon" src="img/drop-down-icon.png" alt="Dropdown list icon"></a>
 					</div>
 				</div>
 			</div>
@@ -55,6 +55,12 @@
 					<h1> This is the main section </h1>
 				</div>
 			</div><div id="mobile-layout">
+				<div id="mobile-nav-dropdown">
+					<a href="#home" class="mobile-nav-dropdown-link">home</a>
+					<a href="#about-me" class="mobile-nav-dropdown-link">about me</a>
+					<a href="#projects" class="mobile-nav-dropdown-link">my projects</a>
+					<a href="#3d-printing" class="mobile-nav-dropdown-link">3D printing</a>
+				</div>
 				<div id="mobile-topbar">
 					<div id="mobile-portrait-container">
 						<img id="mobile-portrait-img" src="img/portrait.webp" alt="Portrait of Zak Rowland">
@@ -63,7 +69,7 @@
 					<div id="mobile-resume-button-container">
 						<a href="docs/Resume.pdf" download="Resume.pdf" target="_blank" id="mobile-resume-button">My Résumé</a>
 					</div>
-				</div><div id="mobile-main-content">
+				</div><div id="mobile-main-content">	
 					<h3 id="about-me-heading">About me</h3>
 					<ul id="about-me-list">
 						<li>I will graduate from the Oregon Institute of Technology in June of 2022 with a Bachelor of Science in Computer Engineering Technology.</li>
@@ -93,7 +99,18 @@
 		<footer>
 			<p id="footer-text">This website is licensed under a <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" id="license-link">Creative Commons Zero 1.0 Universal License</a>.</p>
 		</footer>
-		<!-- any scripts go at the bottom -->
-		<!-- <script src="js/scripts.js"></script> -->
 	</body>
+	<script type="text/javascript">
+		function toggleDropdown() {
+			var button = document.getElementById("mobile-nav-button");
+			var dropdown = document.getElementById("mobile-nav-dropdown")
+			button.addEventListener("click", event => {
+			if (dropdown.style.display === "flex") {
+				dropdown.style.display = "hidden";
+			} else {
+				dropdown.style.display = "flex";
+			}
+		});
+		}
+	</script>
 </html>
