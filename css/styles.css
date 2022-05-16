@@ -87,6 +87,59 @@
 		padding-right: 16px;
 	}
 
+	button {
+		overflow: hidden;
+		position: relative;
+	}
+
+	button:after {
+		background: white;
+		border-radius: 100%;
+		content: '';
+		display: flex;
+		height: 120px;
+		left: 50%;
+		margin-left: -60px;
+		margin-top: -60px;
+		opacity: .6;
+		position: absolute;
+		top: 50%;
+		transform: scale(0);
+		width: 120px;
+	}
+
+	button:not(:active):after {
+		animation: ripple 0.4s ease-out;
+	}
+
+	button:after {
+		visibility: hidden;
+	}
+
+	button:focus:after {
+		visibility: visible;
+	}
+
+	@keyframes ripple {
+		0% {
+			transform: scale(0);
+		}
+		20% {
+			transform: scale(0.4);
+		}
+		40% {
+			transform: scale(0.8);
+		}
+		80% {
+			opacity: 0.2;
+			transform: scale(1.2);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(1.6);
+		}
+	}
+
 	/****************************************************************/
 
 	body {
@@ -151,13 +204,14 @@
 						box-shadow: 0px 4px black;
 						cursor: pointer;
 						display: flex;
-						height: 56px;
+						height: 80px;
 						justify-content: center;
+						overflow: hidden;
 						padding: 16px 16px;
-						position: inherit;
+						position: relative;
 						text-decoration: none;
-						transition-duration: 0.5s;
-						width: 56px;
+						transition: background 400ms;
+						width: 80px;
 					}
 
 						#dropdown-icon {
@@ -187,7 +241,7 @@
 
 							.mobile-nav-dropdown-button {
 								align-items: center;
-								background-color: none;
+								background-color: var(--primary-color);
 								border: 5px solid white;
 								border-radius: 32px;
 								box-shadow: 0px 4px black;
@@ -200,7 +254,6 @@
 								font-weight: 600;
 								justify-content: center;
 								margin: 8px 6px;
-								/*max-width: 50%;*/
 								min-width: 110px;
 								padding: 16px 24px;
 								text-align: center;
@@ -238,11 +291,20 @@
 
 				#mobile-portrait-container {
 					align-self: center;
-					justify-content: center;
+					background-color: none;
+					justify-content: right;
 					display: inline-flex;
 					height: 90%;
-					margin-left: 8px;
-					width: 50%;
+					width: 25%;
+				}
+
+				#mobile-portrait-text-container {
+					align-self: center;
+					background-color: none;
+					justify-content: left;
+					display: inline-flex;
+					height: 90%;
+					width: 25%;
 				}
 
 					#mobile-portrait-img {
@@ -260,6 +322,7 @@
 
 				#mobile-resume-button-container {
 					align-self: center;
+					background-color: none;
 					display: inline-flex;
 					height: 90%;
 					justify-content: center;
@@ -281,7 +344,7 @@
 						font-weight: 600;
 						justify-content: center;
 						margin: 8px 6px;
-						max-width: 48px;
+						max-width: 180px;
 						padding: 16px 48px;
 						text-align: center;
 						text-decoration: none;
@@ -353,10 +416,11 @@
 						font-weight: 600;
 						justify-content: center;
 						margin: 8px 6px;
+						max-width: 300px;
 						padding: 16px 48px;
 						text-align: center;
 						text-decoration: none;
-						transition-duration: 0.5s;
+						width: 75%;
 					}
 
 	/****************************************************************/

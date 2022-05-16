@@ -37,7 +37,7 @@
 						<a href="#" class="nav-button">PROJECTS</a>
 						<a href="#" class="nav-button">3D PRINTING</a>
 					</div><div id="mobile-nav">
-						<a id="mobile-nav-button" onclick="toggleDropdown()"><img id="dropdown-icon" src="img/drop-down-icon.png" alt="Dropdown list icon"></a>
+						<button id="mobile-nav-button" onclick="toggleDropdown()"><img id="dropdown-icon" src="img/drop-down-icon.png" alt="Dropdown list icon"></button>
 					</div>
 				</div>
 			</div>
@@ -57,22 +57,21 @@
 			</div><div id="mobile-layout">
 				<div id="mobile-nav-dropdown">
 					<div id="mobile-nav-dropdown-row-top">
-						<a href="#home" class="mobile-nav-dropdown-button">HOME</a>
-
-						<a href="#about-me" class="mobile-nav-dropdown-button">ABOUT ME</a>
+						<button href="#home" class="mobile-nav-dropdown-button">HOME</button>
+						<button href="#about-me" class="mobile-nav-dropdown-button">ABOUT ME</button>
 					</div><div id="mobile-nav-dropdown-row-bot">
-						<a href="#projects" class="mobile-nav-dropdown-button">MY PROJECTS</a>
-			
-						<a href="#3d-printing" class="mobile-nav-dropdown-button">3D PRINTING</a>
+						<button href="#projects" class="mobile-nav-dropdown-button">MY PROJECTS</button>
+						<button href="#3d-printing" class="mobile-nav-dropdown-button">3D PRINTING</button>
 					</div>
 				</div>
 				<div id="mobile-topbar">
 					<div id="mobile-portrait-container">
 						<img id="mobile-portrait-img" src="img/portrait.webp" alt="Portrait of Zak Rowland">
+					</div><div id="mobile-portrait-text-container">
 						<h1 id="mobile-portrait-text">Hi, <br>I'm Zak!</h1>
 					</div>
 					<div id="mobile-resume-button-container">
-						<a href="docs/Resume.pdf" download="Resume.pdf" target="_blank" id="mobile-resume-button">My Résumé</a>
+						<button href="docs/Resume.pdf" download="Resume.pdf" target="_blank" id="mobile-resume-button">My Résumé</button>
 					</div>
 				</div><div id="mobile-main-content">	
 					<h3 id="about-me-heading">About me</h3>
@@ -99,7 +98,7 @@
 					</figure>
 					<div id="projects-cta-container"><p id="projects-cta">Find out more about all of my projects <a href="https://zak-rowland.com/projects" target="_blank" id="projects-link">here</a>.</p></div>
 					<div id="btt-button-container">
-						<a href="#home" id="btt-button">Back to top ↑</a>
+						<button href="#home" id="btt-button">Back to top ↑</button>
 					</div>
 				</div>
 			</div>
@@ -109,6 +108,7 @@
 		</footer>
 	</body>
 	<script type="text/javascript">
+		
 		function toggleDropdown() {
 			var button = document.getElementById("mobile-nav-button");
 			var dropdown = document.getElementById("mobile-nav-dropdown")
@@ -118,5 +118,6 @@
 				dropdown.style.display = "flex";
 			}
 		}
+
 	</script>
 </html>
