@@ -163,12 +163,13 @@
 			background: var(--primary);
 			display: flex;
 			height: 20vh;
-			max-height: 150px;
+			max-height: 130px;
 			min-height: 100px;
 			padding: var(--border-margin);
 		}
 
 			#title-column {
+				background-color: fuchsia;
 				display: flex;
 				flex-direction: column;
 				height: 100%;
@@ -177,6 +178,7 @@
 			}
 
 				#title-row {
+					background-color: goldenrod;
 					align-items: flex-end;
 					display: flex;
 					font-size: 100%;
@@ -185,11 +187,12 @@
 				}
 
 				#subtitle-row {
+					background-color: darkolivegreen;
 					align-items: flex-start;
 					display: flex;
 					font-size: 100%;
 					height: 50%;
-					padding-bottom: 12px;
+					padding-bottom: 8px;
 					width: 100%;
 				}
 
@@ -206,6 +209,7 @@
 				}
 
 				#mobile-nav-container {
+					background-color: purple;
 					align-items: center;
 					display: inline-flex;
 					height: 100%;
@@ -279,9 +283,7 @@
 	main { 
 		background-color: var(--bg-color);
 		display: flex;
-		/*height: 75vh;*/
 		margin:  0px auto;
-		/*min-height: 500px;*/
 	}
 
 		#desktop-layout {
@@ -298,32 +300,35 @@
 				background-color: var(--accent);
 				display: flex;
 				height: 15vh;
-				min-height: 80px;
-				width: 100%;
+				max-height: 110px;
+				min-height: 90px;
+				padding: var(--border-margin);
 			}
 
 				#mobile-portrait-container {
 					align-self: center;
-					background-color: none;
-					justify-content: right;
-					display: inline-flex;
-					height: 90%;
-					width: 25%;
-				}
-
-				#mobile-portrait-text-container {
-					align-self: center;
-					background-color: none;
-					justify-content: left;
-					display: inline-flex;
-					height: 90%;
+					background-color: red;
+					justify-content: flex-end;
+					display: flex;
+					height: 100%;
+					padding-right: var(--border-margin);
 					width: 25%;
 				}
 
 					#mobile-portrait-img {
-						display: inline-flex;
-						justify-content: center;
+
 					}
+
+				#mobile-portrait-text-container {
+					align-self: center;
+					background-color: green;
+					justify-content: left;
+					display: flex;
+					height: 100%;
+					padding-left: var(--border-margin);
+					padding-right: var(--border-margin);
+					width: 25%;
+				}
 
 					#mobile-portrait-text {
 						align-self: center;
@@ -335,9 +340,9 @@
 
 				#mobile-resume-button-container {
 					align-self: center;
-					background-color: none;
-					display: inline-flex;
-					height: 90%;
+					background-color: pink;
+					display: flex;
+					height: 100%;
 					justify-content: center;
 					width: 50%;
 				}
