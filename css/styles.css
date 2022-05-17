@@ -1,30 +1,43 @@
-/*
-	CSS by Zak Rowland, 2022
-
-	Color scheme:
-		Indigo Dye (blue)				= #0D3B66
-		Lemon Meringue (white-ish) 		= #FAF0CA
-		Orange Yellow Crayola (yellow) 	= #F4D35E 
-		Sandy Brown (orange) 			= #EE964B
-		Orange Soda (dark orange) 		= #BD632F
-*/
+/* CSS by Zak Rowland, 2022 */
 
 :root {
-	--primary-color: #0D3B66; /* blue */
-	--accent-color: #F4D35E; /* yellow */
-	--bg-color: #FAF0CA; /* white-ish */
-	--default-text-color: black;
-	--default-heading-color: black;
+	--border-margin: 4px;
+
+	--primary: #1A3A48; /* Dark blue-green */
+	--primary-light: #255266;
+	--primary-dark: #173441;
+	--primary-complement: #F7B66A; /* Sand brown */
+
+	--accent: #0391A1; /* Light blue */
+	--accent-light: #04B0C3;
+	--accent-dark: #038291;
+
+	--bg: #EDEDE8; /* Light grey-blue */
+	--bg-light: #EFEFEA;
+	--bg-dark: #D8D8CE;
+
+	--unclicked-link: #E54825; /* Orange */
+	--unclicked-link-light: #E85A3B;
+	--unclicked-link-dark: #D63C1A;
+
+	--clicked-link: #E54825; /* Brown-grey */
+	--clicked-link-light: #807161;
+	--clicked-link-dark: #63574B;
+
+	--mobile-nav-btn: var(--primary-light);
+	--mobile-nav-btn-shadow: var(--primary-dark);
+	
+	--resume-btn: var(--accent-light);
+	--resume-btn-shadow: var(--accent-dark);
+
 	--heading-one-color: white;
-	--heading-two-color: #FAF0CA; /* white-ish */
-	--unclicked-link-color: #EE964B; /* orange */
-	--clicked-link-color: #BD632F; /* dark orange */
+	--heading-two-color: var(--primary-complement);
 }
 
 /********************************************************************
  * Smartphone styling                                               *
  ********************************************************************/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
 	
 	p {
 		color: var(--default-text-color);
@@ -43,7 +56,7 @@
 	h2 {
 		color: var(--heading-two-color);
 		font-family:  "Quicksand", sans-serif;
-		font-size: 1em;
+		font-size: 1.2em;
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
@@ -143,52 +156,56 @@
 	/****************************************************************/
 
 	body {
-		min-height: 640px;
-		min-width: 360px;
+		min-width: 320px;
 	}
 
-	header {
-		background: var(--primary-color);
-		display: flex;
-		height: 15vh;
-		min-height: 120px;
-	}
-
-		#title-col {
-			align-self: center;
-			display: inline-flex;
-			height: 90%;
-			justify-content: left;
-			margin-left: 8px;
-			width: 70%;
+		header {
+			background: var(--primary);
+			display: flex;
+			height: 20vh;
+			max-height: 150px;
+			min-height: 100px;
+			padding: var(--border-margin);
 		}
 
-			#title-text {
-				align-self: center;
-				font-size: 100%;
-				text-align: left;
-			}
-
-		#nav-col {
-			align-self: center;
-			display: inline-flex;
-			height: 90%;
-			justify-content: right;
-			margin-right: 8px;
-			width: 30%;
-		}
-
-			#nav-bar {
-				align-self: center;
+			#title-column {
+				display: flex;
+				flex-direction: column;
 				height: 100%;
-				width: 90%;
+				padding-right: var(--border-margin);
+				width: 70%;
 			}
 
-				#desktop-nav {
+				#title-row {
+					align-items: flex-end;
+					display: flex;
+					font-size: 100%;
+					height: 50%;
+					width: 100%;
+				}
+
+				#subtitle-row {
+					align-items: flex-start;
+					display: flex;
+					font-size: 100%;
+					height: 50%;
+					padding-bottom: 12px;
+					width: 100%;
+				}
+
+			#nav-column {
+				align-self: center;
+				display: inline-flex;
+				height: 100%;
+				justify-content: right;
+				width: 30%;
+			}
+
+				#desktop-nav-container {
 					display: none;
 				}
 
-				#mobile-nav {
+				#mobile-nav-container {
 					align-items: center;
 					display: inline-flex;
 					height: 100%;
@@ -198,53 +215,49 @@
 
 					#mobile-nav-button {
 						align-items: center;
-						background-color: var(--accent-color);
-						border: 5px solid white;
+						background-color: var(--mobile-nav-btn);
+						border: 4px solid white;
 						border-radius: 50%;
-						box-shadow: 0px 4px black;
+						box-shadow: 0px 4px var(--mobile-nav-btn-shadow);
 						cursor: pointer;
 						display: flex;
-						height: 80px;
 						justify-content: center;
-						overflow: hidden;
+						height: 80px;
 						padding: 16px 16px;
-						position: relative;
-						text-decoration: none;
-						transition: background 400ms;
 						width: 80px;
 					}
 
 						#dropdown-icon {
-							max-width: 75%;
+							max-width: 80%;
 						}
 
 					#mobile-nav-dropdown {
-						background-color: var(--primary-color);
+						background-color: var(--primary);
 						display: none;
 						flex-direction: column;
 					}
 
 						#mobile-nav-dropdown-row-top{
-							background-color: var(--primary-color);
+							background-color: var(--primary);
 							display: flex;
 							justify-content: center;
 							width: 100%;
 						}
 
 						#mobile-nav-dropdown-row-bot{
-							background-color: var(--primary-color);
+							background-color: var(--primary);
 							display: flex;
 							justify-content: center;
-							margin-bottom: 4px;
+							padding-bottom: var(--border-margin);
 							width: 100%;
 						}
 
 							.mobile-nav-dropdown-button {
 								align-items: center;
-								background-color: var(--primary-color);
-								border: 5px solid white;
+								background-color: var(--mobile-nav-btn);
+								border: 4px solid white;
 								border-radius: 32px;
-								box-shadow: 0px 4px black;
+								box-shadow: 0px 4px var(--mobile-nav-btn-shadow);
 								color: white;
 								cursor: pointer;
 								display: inline-flex;
@@ -258,7 +271,7 @@
 								padding: 16px 24px;
 								text-align: center;
 								text-decoration: none;
-								width: 50vw;
+								width: 50%;
 							}
 
 	/****************************************************************/
@@ -282,7 +295,7 @@
 		}
 
 			#mobile-topbar {
-				background-color: var(--accent-color);
+				background-color: var(--accent);
 				display: flex;
 				height: 15vh;
 				min-height: 80px;
@@ -331,11 +344,11 @@
 
 					#mobile-resume-button {
 						align-items: center;
-						background-color: var(--primary-color);
+						background-color: var(--resume-btn);
 						border: 5px solid white;
 						border-radius: 50px;
-						box-shadow: 0px 4px black;
-						color: white;
+						box-shadow: 0px 4px var(--resume-btn-shadow);
+						color: var(--bg);
 						cursor: pointer;
 						display: flex;
 						font-family:  "Quicksand", sans-serif;
@@ -384,7 +397,7 @@
 					}
 
 					#projects-link {
-						color:  var(--primary-color);
+						color:  var(--primary);
 						font-family: "Quicksand", sans-serif;
 						font-size: 1.2em;
 						font-style: normal;
@@ -403,7 +416,7 @@
 
 					#btt-button {
 						align-items: center;
-						background-color: var(--primary-color);
+						background-color: var(--primary);
 						border: 5px solid white;
 						border-radius: 50px;
 						box-shadow: 0px 4px black;
@@ -427,7 +440,7 @@
 
 	footer {
 		align-items: center;
-		background: var(--primary-color);
+		background: var(--primary);
 		display: flex;
 		justify-content: center;
 		min-height: 64px;
@@ -444,7 +457,7 @@
 		}
 
 		#license-link {
-			color: var(--unclicked-link-color);
+			color: var(--unclicked-link-light);
 			font-family:  "Quicksand", sans-serif;
 			font-size: 1em;
 			font-style: normal;
@@ -458,7 +471,7 @@
 /********************************************************************
  * Tablet styling                                                   *
  ********************************************************************/
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
+@media screen and (min-width: 481px) and (max-width: 1023px) {}
 
 /********************************************************************
  * Desktop styling                                                  *
@@ -508,7 +521,7 @@
 	/****************************************************************/
 
 	header {
-		background: var(--primary-color);
+		background: var(--primary);
 		display: flex;
 		height: 15vh;
 		min-height: 100px;
@@ -564,7 +577,7 @@
 				}
 
 				.nav-button:hover {
-					background-color: var(--unclicked-link-color);
+					background-color: var(--unclicked-link);
 					color: white;
 				}
 
@@ -582,7 +595,7 @@
 		}
 
 			#left-sidebar {
-				background: var(--accent-color);
+				background: var(--accent);
 				display: inline-flex;
 				justify-content: center;
 				width: 20%;
@@ -613,7 +626,7 @@
 
 	footer {
 		align-items: center;
-		background: var(--primary-color);
+		background: var(--primary);
 		display: flex;
 		height: 10vh;
 		justify-content: center;
@@ -630,7 +643,7 @@
 		}
 
 		#license-link {
-			color: var(--unclicked-link-color);
+			color: var(--unclicked-link);
 			font-family:  "Quicksand", sans-serif;
 			font-size: 1em;
 			font-style: normal;
