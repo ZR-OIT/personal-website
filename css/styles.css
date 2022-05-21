@@ -11,6 +11,7 @@
 	--accent: #0391A1; /* Light blue */
 	--accent-light: #04B0C3;
 	--accent-dark: #038291;
+	--accent-complement: #A13003;
 
 	--bg: #EDEDE8; /* Light grey */
 	--bg-light: #EFEFEA;
@@ -20,7 +21,7 @@
 	--unclicked-link-light: #E85A3B;
 	--unclicked-link-dark: #D63C1A;
 
-	--clicked-link: #E54825; /* Brown-grey */
+	--clicked-link: #796c6b; /* Brown-grey */
 	--clicked-link-light: #807161;
 	--clicked-link-dark: #63574B;
 
@@ -30,8 +31,11 @@
 	--resume-btn: var(--accent-light);
 	--resume-btn-shadow: var(--accent-dark);
 
-	--heading-one-color: white;
-	--heading-two-color: var(--primary-complement);
+	--heading-one: white;
+	--heading-two: var(--primary-complement);
+
+	--default-text: black;
+	--default-heading: black;
 }
 
 /********************************************************************
@@ -40,12 +44,12 @@
 @media screen and (max-width: 480px) {
 	
 	p {
-		color: var(--default-text-color);
+		color: var(--default-text);
 		margin: 0;
 	}
 
 	h1 {
-		color: var(--heading-one-color);
+		color: var(--heading-one);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 2em;
 		font-style: normal;
@@ -54,7 +58,7 @@
 	}
 
 	h2 {
-		color: var(--heading-two-color);
+		color: var(--heading-two);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 1.2em;
 		font-style: normal;
@@ -63,7 +67,7 @@
 	}
 
 	h3 {
-		color: var(--default-heading-color);
+		color: var(--default-heading);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 1.5em;
 		font-style: normal;
@@ -83,7 +87,7 @@
 	
 	figure figcaption {
 		align-self: center;
-		color: var(--default-heading-color);
+		color: var(--default-heading);
 		font-family: "Quicksand", sans-serif;
 		font-size: 1em;
 		font-style: italic;
@@ -92,7 +96,7 @@
 	}
 
 	li {
-		color: var(--default-text-color);
+		color: var(--default-text);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 0.9em;
 		font-style: normal;
@@ -303,7 +307,7 @@
 
 				#mobile-portrait-container {
 					align-self: center;
-					justify-content: flex-end;
+					justify-content: right;
 					display: flex;
 					height: 100%;
 					padding-right: var(--border-margin);
@@ -313,8 +317,8 @@
 					#mobile-portrait-img {
 						align-self: center;
 						height: 24vw;
-						max-height: 110px;
-						max-width: 110px;
+						max-height: 90px;
+						max-width: 90px;
 						min-height: 70px;
 						min-width: 70px;
 						width: 24vw;
@@ -332,17 +336,18 @@
 
 					#mobile-portrait-text {
 						align-self: center;
-						color: black;
+						color: var(--bg);
 						display: inline-flex;
 						font-size: 1.25em;
 						padding-left: 4px;
 					}
 
 				#mobile-resume-button-container {
-					align-self: center;
+					align-items: center;
 					display: flex;
 					height: 100%;
 					justify-content: center;
+					padding-left: var(--border-margin);
 					width: 50%;
 				}
 
@@ -359,13 +364,14 @@
 						font-size: 1.25em;
 						font-style: normal;
 						font-weight: 600;
+						height: 75%;
 						justify-content: center;
-						margin: 8px 6px;
 						max-width: 180px;
+						min-width: 148px;
 						padding: 16px 48px;
 						text-align: center;
 						text-decoration: none;
-						transition-duration: 0.5s;
+						width: 100%;
 					}
 
 			#mobile-main-content {
