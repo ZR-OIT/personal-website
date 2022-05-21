@@ -107,6 +107,7 @@
 	button {
 		overflow: hidden;
 		position: relative;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	button:after {
