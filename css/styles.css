@@ -1,4 +1,4 @@
-/* CSS by Zak Rowland, 2022 */
+/* Zak Rowland, 2022 */
 
 :root {
 	--border-margin: 4px;
@@ -12,7 +12,7 @@
 	--accent-light: #04B0C3;
 	--accent-dark: #038291;
 
-	--bg: #EDEDE8; /* Light grey-blue */
+	--bg: #EDEDE8; /* Light grey */
 	--bg-light: #EFEFEA;
 	--bg-dark: #D8D8CE;
 
@@ -169,7 +169,6 @@
 		}
 
 			#title-column {
-				background-color: fuchsia;
 				display: flex;
 				flex-direction: column;
 				height: 100%;
@@ -178,7 +177,6 @@
 			}
 
 				#title-row {
-					background-color: goldenrod;
 					align-items: flex-end;
 					display: flex;
 					font-size: 100%;
@@ -187,7 +185,6 @@
 				}
 
 				#subtitle-row {
-					background-color: darkolivegreen;
 					align-items: flex-start;
 					display: flex;
 					font-size: 100%;
@@ -209,7 +206,6 @@
 				}
 
 				#mobile-nav-container {
-					background-color: purple;
 					align-items: center;
 					display: inline-flex;
 					height: 100%;
@@ -281,7 +277,7 @@
 	/****************************************************************/
 
 	main { 
-		background-color: var(--bg-color);
+		background-color: var(--bg);
 		display: flex;
 		margin:  0px auto;
 	}
@@ -307,7 +303,6 @@
 
 				#mobile-portrait-container {
 					align-self: center;
-					background-color: red;
 					justify-content: flex-end;
 					display: flex;
 					height: 100%;
@@ -316,12 +311,17 @@
 				}
 
 					#mobile-portrait-img {
-
+						align-self: center;
+						height: 24vw;
+						max-height: 110px;
+						max-width: 110px;
+						min-height: 70px;
+						min-width: 70px;
+						width: 24vw;
 					}
 
 				#mobile-portrait-text-container {
 					align-self: center;
-					background-color: green;
 					justify-content: left;
 					display: flex;
 					height: 100%;
@@ -340,7 +340,6 @@
 
 				#mobile-resume-button-container {
 					align-self: center;
-					background-color: pink;
 					display: flex;
 					height: 100%;
 					justify-content: center;
