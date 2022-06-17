@@ -12,7 +12,7 @@
 
 		<meta property="og:title" content="Zak Rowland - B.S. in Computer Engineering Technology">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://www.zak-rowland.com">
+		<meta property="og:url" content="https://www.zakrow.land">
 		<meta property="og:description" content="Zak Rowland is a graduate from the Oregon Institute of Technology with a Bachelor of Science in Computer Engineering Technology.">
 		<!-- <meta property="og:image" content="image.png"> -->
 
@@ -22,6 +22,9 @@
 
 		<link rel="stylesheet" href="css/styles.css?v=1.0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+		<link rel="prefetch" href="pages/about.html">
+		<link rel="prefetch" href="pages/projects.html">
+		<link rel="prefetch" href="pages/3d-printing.html">
 	</head>
 	<!-- END HEAD --------------------------------------------------------------------------->
 	<!-- BODY ------------------------------------------------------------------------------->
@@ -37,9 +40,9 @@
 			</div><div id="nav-column">
 				<div id="desktop-nav-container">
 						<a href="#" class="nav-button">HOME</a>
-						<a href="#" class="nav-button">ABOUT ME</a>
-						<a href="#" class="nav-button">PROJECTS</a>
-						<a href="#" class="nav-button">3D PRINTING</a>
+						<a href="pages/about.html" class="nav-button">ABOUT ME</a>
+						<a href="pages/projects.html" class="nav-button">PROJECTS</a>
+						<a href="pages/3d-printing" class="nav-button">3D PRINTING</a>
 				</div>
 				<div id="mobile-nav-container">
 					<button id="mobile-nav-button" onclick="toggleDropdown()">
@@ -64,15 +67,11 @@
 				</div>
 			</div><div id="mobile-layout">
 				<div id="mobile-nav-dropdown">
-					<div id="mobile-nav-dropdown-row-top">
-						<button href="#home" class="mobile-nav-dropdown-button">HOME</button>
-						<button href="#about-me" class="mobile-nav-dropdown-button">ABOUT ME</button>
-					</div><div id="mobile-nav-dropdown-row-bot">
-						<button href="#projects" class="mobile-nav-dropdown-button">MY PROJECTS</button>
-						<button href="#3d-printing" class="mobile-nav-dropdown-button">3D PRINTING</button>
-					</div>
-				</div>
-				<div id="mobile-topbar">
+					<a href="index.html"><button class="mobile-nav-dropdown-button">HOME</button></a>
+					<a href="pages/about.html"><button class="mobile-nav-dropdown-button">ABOUT ME</button></a>
+					<a href="pages/projects.html"><button class="mobile-nav-dropdown-button">MY PROJECTS</button></a>
+					<a href="pages/3d-printing.html"><button class="mobile-nav-dropdown-button">3D PRINTING</button></a>
+				</div><div id="mobile-topbar">
 					<div id="mobile-portrait-container">
 						<img id="mobile-portrait-img" src="img/portrait.webp" alt="Portrait of Zak Rowland">
 					</div><div id="mobile-portrait-text-container">
