@@ -20,17 +20,90 @@
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-		<link rel="stylesheet" href="css/styles.css?v=1.0">
+		<link rel="stylesheet" href="/css/styles.css?v=1.0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 	</head>
 	<!-- END HEAD --------------------------------------------------------------------------->
 	<!-- BODY ------------------------------------------------------------------------------->
 	<body style="margin: 0;">
 		<!-- HEADER ------------------------------------------------------------------------->
-		
+		<header>
+			<div id="title-column">
+				<div id="title-row">
+					<h1>Zak Rowland</h1>
+				</div><div id="subtitle-row">
+					<h2>B.S. in Computer Engineering Technology</h2>
+				</div>
+			</div><div id="nav-column">
+				<div id="desktop-nav-container">
+						<a href="#" class="nav-button">HOME</a>
+						<a href="pages/about.html" class="nav-button">ABOUT ME</a>
+						<a href="pages/projects.html" class="nav-button">PROJECTS</a>
+						<a href="pages/3d-printing" class="nav-button">3D PRINTING</a>
+				</div>
+				<div id="mobile-nav-container">
+					<button id="mobile-nav-button" onclick="toggleDropdown()">
+						<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon">
+					</button>
+				</div>
+			</div>
+		</header>
 		<!-- END HEADER --------------------------------------------------------------------->
 		<!-- MAIN --------------------------------------------------------------------------->
-		<p>about</p>
+		<main>
+			<div id="desktop-layout">
+				<div id="left-sidebar">
+					<div id="left-sidebar-portrait">
+						<figure>
+							<img src="/img/portrait-placeholder.png" alt="Portrait placeholder">
+							<figcaption>Hi, I'm Zak!</figcaption>
+						</figure>
+					</div>
+				</div><div id="main-content">
+					<h1> This is the main section </h1>
+				</div>
+			</div><div id="mobile-layout">
+				<div id="mobile-nav-dropdown">
+					<a href="/index.html"><button class="mobile-nav-dropdown-button">HOME</button></a>
+					<a href="/pages/about.html"><button class="mobile-nav-dropdown-button">ABOUT ME</button></a>
+					<a href="/pages/projects.html"><button class="mobile-nav-dropdown-button">MY PROJECTS</button></a>
+					<a href="/pages/3d-printing.html"><button class="mobile-nav-dropdown-button">3D PRINTING</button></a>
+				</div><div id="mobile-topbar">
+					<div id="mobile-portrait-container">
+						<img id="mobile-portrait-img" src="/img/portrait.webp" alt="Portrait of Zak Rowland">
+					</div><div id="mobile-portrait-text-container">
+						<h1 id="mobile-portrait-text">Hi, <br>I'm Zak!</h1>
+					</div>
+					<div id="mobile-resume-button-container">
+						<button href="/docs/Resume.pdf" download="Resume.pdf" target="_blank" id="mobile-resume-button">My Résumé</button>
+					</div>
+				</div><div id="mobile-main-content">	
+					<h3 id="about-me-heading">About me</h3>
+					<p id="about-me-paragraph"><br>My interest in computers and electronics began in middle school when the family computer stopped working. We couldn't afford a new one at the time, so I had two options: find a way to fix it, or go without it. My mom wasn't enthusiastic about letting me try, but I insisted.<br><br>After hours of Googling and tinkering with the machine, I determined that the hard drive had failed and a new one with a fresh copy of Windows would get it up and running again. It worked, and although it seems like a small victory, this kickstarted my interest in computers and how they work under the hood.
+					</p>
+					<figure>
+						<img src="img/senior-project-main-circuit.webp" alt="Main circuit of senior project">
+						<figcaption>The main circuit of my senior project.</figcaption>
+					</figure>
+					<figure>
+						<img src="img/senior-project-transceiver-schematic.webp" alt="Schematic for main circuit of senior project">
+						<figcaption>The schematic for the main circuit of my senior project.</figcaption>
+					</figure>
+					<figure>
+						<img src="img/south-dakota-trip.webp" alt="Feeding prairie dogs in South Dakota">
+						<figcaption>Feeding prairie dogs in South Dakota.</figcaption>
+					</figure>
+					<figure>
+						<img src="img/minecraft-mopop-seattle.webp" alt="Minecraft exhibit at the Museum of Pop Culture">
+						<figcaption>Minecraft exhibit at the Museum of Pop Culture in Seattle.</figcaption>
+					</figure>
+					<div id="projects-cta-container"><p id="projects-cta">Find out more about all of my projects <a href="https://zak-rowland.com/projects" target="_blank" id="projects-link">here</a>.</p></div>
+					<div id="btt-button-container">
+						<button href="#home" id="btt-button">Back to top ↑</button>
+					</div>
+				</div>
+			</div>
+		</main>
 		<!-- END MAIN ----------------------------------------------------------------------->
 		<!-- FOOTER ------------------------------------------------------------------------->
 		<footer>

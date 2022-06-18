@@ -379,6 +379,15 @@
 						font-size: 1.25em;
 					}
 
+					#about-me-paragraph {
+						color: var(--default-text);
+						font-family:  "Quicksand", sans-serif;
+						font-size: 1em;
+						font-style: normal;
+						font-weight: 400;
+						text-align: center;
+					}
+
 					#projects-cta-container {
 						align-self: center;
 						display: flex;
