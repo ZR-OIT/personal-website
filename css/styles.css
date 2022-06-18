@@ -281,6 +281,10 @@
 						width: 100%;
 					}
 
+					#mobile-nav-dropdown a:link {
+						text-decoration: none;
+					}
+
 				#mobile-topbar {
 					align-self: center;
 					background-color: var(--accent);
