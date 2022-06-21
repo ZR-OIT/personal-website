@@ -45,6 +45,10 @@
 	
 	p {
 		color: var(--default-text);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 1em;
+		font-style: normal;
+		font-weight: 400;
 		margin: 0;
 	}
 
@@ -74,6 +78,37 @@
 		font-weight: 400;
 		margin: 0;
 		padding-top: 16px;
+	}
+
+	h4 {
+		color: var(--default-heading);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 1.1em;
+		font-style: normal;
+		font-weight: 600;
+		margin: 0;
+		padding-bottom: var(--border-margin);
+		text-decoration: underline;
+	}
+
+	h5 {
+		color: var(--default-heading);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 0.8em;
+		font-style: normal;
+		font-weight: 400;
+		margin: 0;
+		padding-bottom: 4px;
+	}
+
+	h6 {
+		color: var(--default-heading);
+		font-family:  "Quicksand", sans-serif;
+		font-size: 1em;
+		font-style: italic;
+		font-weight: 400;
+		margin: 0;
+		padding-top: 0px;
 	}
 	
 	figure {
@@ -370,7 +405,7 @@
 					width: 100%;
 				}
 
-					#about-me-heading {
+					.about-me-heading {
 						text-align: center;
 						text-decoration: underline;
 					}
@@ -379,14 +414,30 @@
 						font-size: 1.25em;
 					}
 
-					#about-me-paragraph {
+					.about-me-paragraph {
 						color: var(--default-text);
 						font-family:  "Quicksand", sans-serif;
 						font-size: 1em;
 						font-style: normal;
 						font-weight: 400;
+						padding: 8px 16px 8px 16px;
 						text-align: center;
 					}
+					
+					.experience-entry {
+						padding: 8px 16px 8px 16px;
+						text-align: center;
+					}
+
+						.job-title {
+							font-size: 0.9em;
+							font-style: normal;
+							font-weight: 600;
+						}
+
+						.job-description {
+							font-style: italic;
+						}
 
 					#projects-cta-container {
 						align-self: center;
