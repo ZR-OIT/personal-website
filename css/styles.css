@@ -196,6 +196,7 @@
 	/****************************************************************/
 
 	body {
+		margin: 0;
 		min-width: 320px;
 	}
 
@@ -277,6 +278,7 @@
 			background-color: var(--bg);
 			display: flex;
 			margin:  0px auto;
+			width: 100%;
 		}
 
 			#desktop-layout {
@@ -286,6 +288,7 @@
 			#mobile-layout {
 				display: flex;
 				flex-direction: column;
+				width: 100%;
 			}
 
 				#mobile-nav-dropdown {
@@ -438,6 +441,12 @@
 						.job-description {
 							font-style: italic;
 						}
+					
+					.project-heading {
+						padding: 8px 16px 8px 16px;
+						text-align: center;
+						text-decoration: none;
+					}
 
 					#projects-cta-container {
 						align-self: center;
