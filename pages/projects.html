@@ -80,14 +80,14 @@
 				</div><div id="mobile-main-content">	
 					<h3 class="about-me-heading">Academic Projects</h3>
 					<h4 class="project-heading">Embedded Junior Project -<br>Electronic Directory Board</h4>
-					<p class ="about-me-paragraph">The embedded junior project at Oregon Tech is a team-based project that includes designing and buidling an embedded system to solve a particular problem. Myself and three others decided to build an electronic directory board to keep track of classroom and lab schedules.</p>
-					<p class ="about-me-paragraph">Why a directory board? Many students need to use classrooms or labs outside of their scheduled course times. However, these rooms could be occupied by a professor and/or their students at any given time, so awkward interruptions can happen when walking into a room to use the equipment.</p>
-					<p class ="about-me-paragraph">With an electronic directory board posted in the main lobby, students and professors could easily see which rooms are open for use by looking at the status LEDs. With a combination of a pre-programmed schedules and motion sensors, the directory can show if rooms are open or booked as well as if anyone is currently in the room.</p>
+					<p class="about-me-paragraph">The embedded junior project at Oregon Tech is a team-based project that includes designing and buidling an embedded system to solve a particular problem. Myself and three others decided to build an electronic directory board to keep track of classroom and lab schedules.</p>
+					<p class="about-me-paragraph">Why a directory board? Many students need to use classrooms or labs outside of their scheduled course times. However, these rooms could be occupied by a professor and/or their students at any given time, so awkward interruptions can happen when walking into a room to use the equipment.</p>
+					<p class="about-me-paragraph">With an electronic directory board posted in the main lobby, students and professors could easily see which rooms are open for use by looking at the status LEDs. With a combination of a pre-programmed schedules and motion sensors, the directory can show if rooms are open or booked as well as if anyone is currently in the room.</p>
 					<figure>
 						<img src="/img/animated-purvine-directory.gif" alt="A simple animation showcasing how the electronic directory works">
 						<figcaption>A simple animation I made to show how the electronic directory works.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">Once we had the idea, we researched and compared many different components including microcontrollers, shift registers, power supplies, and LEDs. We eventually decided to use the ESP32 Arduino because it was low-cost and had built in Wi-Fi. With all the parts chosen, I made basic schematics in Microsoft Visio to show how the circuits are assembled.</p>
+					<p class="about-me-paragraph">Once we had the idea, we researched and compared many different components including microcontrollers, shift registers, power supplies, and LEDs. We eventually decided to use the ESP32 Arduino because it was low-cost and had built in Wi-Fi. With all the parts chosen, I made basic schematics in Microsoft Visio to show how the circuits are assembled.</p>
 					<figure>
 						<img src="/img/junior-project-LED-schematic.webp" alt="The schematic for the RGB LED and shift register circuit">
 						<figcaption>The schematic for the RGB LED and shift register circuit.</figcaption>
@@ -95,7 +95,7 @@
 						<img src="/img/junior-project-PIR-schematic.webp" alt="The schematic for the passive infrared motion sensor and shift register circuit">
 						<figcaption>The schematic for the passive infrared motion sensor and shift register circuit.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">As soon as we had the parts in our hands, we tested everything individually before assembling the circuits. It was important to make sure that all LEDs, shift registers, and motion sensors functioned as expected, otherwise we would have a hard time debugging later on. Aside from an issue with some loose wires, the circuitry went together and worked well without much trouble. An Arduino UNO was used for testing since we were already familiar with it.</p>
+					<p class="about-me-paragraph">As soon as we had the parts in our hands, we tested everything individually before assembling the circuits. It was important to make sure that all LEDs, shift registers, and motion sensors functioned as expected, otherwise we would have a hard time debugging later on. Aside from an issue with some loose wires, the circuitry went together and worked well without much trouble. An Arduino UNO was used for testing since we were already familiar with it.</p>
 					<figure>
 						<img src="/img/junior-project-motion-sensor-circuit.webp" alt="The motion sensor and shift register circuit">
 						<figcaption>Testing the motion sensor and shift register circuit with an Arduino UNO.</figcaption>
@@ -106,15 +106,15 @@
 						<img src="/img/junior-project-rgb-led-circuit.webp" alt="The RGB LED circuit">
 						<figcaption>Testing the RGB LED circuit.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">While working on the circuitry, we also had to get the web server up and running on the ESP32. Initially, another team member was tasked with building the website and server. However, the team member was struggling to make substantial progress, so I took over the web server development and moved them over to designing a housing. After a long weekend, I got a simple website implemented that could control the hardware.</p>
+					<p class="about-me-paragraph">While working on the circuitry, we also had to get the web server up and running on the ESP32. Initially, another team member was tasked with building the website and server. However, the team member was struggling to make substantial progress, so I took over the web server development and moved them over to designing a housing. After a long weekend, I got a simple website implemented that could control the hardware.</p>
 					<figure>
 						<img src="/img/junior-project-website.webp" alt="The website used to set room schedules">
 						<figcaption>The website used to set room schedules.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">A library called <a href="https://github.com/me-no-dev/ESPAsyncWebServer" target="_blank">ESPAsyncWebServer</a> was used to implement the web server logic. The HTML and CSS files were flashed to the non-volatile memory of the ESP32 using <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html" target="_blank">SPIFFS</a>. The HTML files are altered before they are served to the user based on the current day and time. We also had to consider multiple people logging into the website at once, so we captured the IP of the first authorized user and prevented other logins until the first authorized user disconnects. There was dicussion of implementing this system in the building, but COVID-19 forced the campus to close.</p>
+					<p class="about-me-paragraph">A library called <a href="https://github.com/me-no-dev/ESPAsyncWebServer" target="_blank">ESPAsyncWebServer</a> was used to implement the web server logic. The HTML and CSS files were flashed to the non-volatile memory of the ESP32 using <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html" target="_blank">SPIFFS</a>. The HTML files are altered before they are served to the user based on the current day and time. We also had to consider multiple people logging into the website at once, so we captured the IP of the first authorized user and prevented other logins until the first authorized user disconnects. There was dicussion of implementing this system in the building, but COVID-19 forced the campus to close.</p>
 					<h4 class="project-heading">Embedded Senior Project -<br>Bluetooth OBD-II diagnostic tool with touchscreen</h4>
-					<p class ="about-me-paragraph">The embedded senior project at Oregon Tech is a solo project. I struggled to come up with an idea at first, but eventually decided on building a Bluetooth OBD-II diagnostic tool with a touchscreen. An <a href="https://en.wikipedia.org/wiki/On-board_diagnostics" target="_blank">OBD-II</a> diagnostic tool is used to interface with vehicles to diagnose check engine lights or to obtain data such as temperatures, pressures, speed, and RPM.</p>
-					<p class ="about-me-paragraph">I wanted to build this tool for a couple different reasons; primarily because I have always liked working on cars. I also wanted to learn more about schematic capture, the CAN bus, Bluetooth, and Raspberry Pi/Linux development. On top of that, I wanted to design and 3D print a housing, so I created prototype renders in SketchUp. The entirety of this project was developed in a remote environment during the peak of the pandemic, so access to lab equipment and other resources was limited.</p>
+					<p class="about-me-paragraph">The embedded senior project at Oregon Tech is a solo project. I struggled to come up with an idea at first, but eventually decided on building a Bluetooth OBD-II diagnostic tool with a touchscreen. An <a href="https://en.wikipedia.org/wiki/On-board_diagnostics" target="_blank">OBD-II</a> diagnostic tool is used to interface with vehicles to diagnose check engine lights or to obtain data such as temperatures, pressures, speed, and RPM.</p>
+					<p class="about-me-paragraph">I wanted to build this tool for a couple different reasons; primarily because I have always liked working on cars. I also wanted to learn more about schematic capture, the CAN bus, Bluetooth, and Raspberry Pi/Linux development. On top of that, I wanted to design and 3D print a housing, so I created prototype renders in SketchUp. The entirety of this project was developed in a remote environment during the peak of the pandemic, so access to lab equipment and other resources was limited.</p>
 					<figure>
 						<img src="/img/senior-project-obd-prototype.webp" alt=">A prototype of the OBD-II transceiver housing">
 						<figcaption>A prototype of the OBD-II transceiver housing.</figcaption>
@@ -125,7 +125,7 @@
 						<img src="/img/senior-project-prototype-top.webp" alt="A top and back view of the prototype handheld unit">
 						<figcaption>A top and back view of the prototype handheld unit.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">Before I could start making schematics and building the circuitry, I had to research the OBD-II specifications and the different components I would need to interface with the port. I determined I would use the ELM327 OBD interpreter IC with an ESP32 to interface with the OBD-II port, and a Raspberry Pi 4 for the handheld unit. I chose the ELM327 because it is widely supported and well documented.</p>
+					<p class="about-me-paragraph">Before I could start making schematics and building the circuitry, I had to research the OBD-II specifications and the different components I would need to interface with the port. I determined I would use the ELM327 OBD interpreter IC with an ESP32 to interface with the OBD-II port, and a Raspberry Pi 4 for the handheld unit. I chose the ELM327 because it is widely supported and well documented.</p>
 					<figure>
 						<img src="/img/senior-project-block-diagram.webp" alt="A block diagram">
 						<figcaption>The system block diagram.</figcaption>
@@ -136,7 +136,7 @@
 						<img src="/img/senior-project-parts-list.webp" alt="A parts list">
 						<figcaption>The parts list for the project.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">With help from the ELM327 datasheet, I made schematics for the OBD-II port module and the handheld module using KiCAD. I also created symbols for ICs that were not included with KiCAD. For development of the OBD-II transceiver, I planned to use Visual Studio Code with the official <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target="_blank">ESP-IDF extension</a> from espressif to write in C/C++. The handheld device would use Python scripts for the GUI and Bluetooth data transfer.</p>
+					<p class="about-me-paragraph">With help from the ELM327 datasheet, I made schematics for the OBD-II port module and the handheld module using KiCAD. I also created symbols for ICs that were not included with KiCAD. For development of the OBD-II transceiver, I planned to use Visual Studio Code with the official <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target="_blank">ESP-IDF extension</a> from espressif to write in C/C++. The handheld device would use Python scripts for the GUI and Bluetooth data transfer.</p>
 					<figure>
 						<img src="/img/senior-project-elm-symbol.webp" alt="A symbol for the ELM327 IC">
 						<figcaption>A custom symbol for the ELM327 chip.</figcaption>
@@ -147,7 +147,7 @@
 						<img src="/img/senior-project-handheld-transceiver-schematic.webp" alt="A block diagram">
 						<figcaption>The schematic for the handheld touchscreen transceiver module.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">With the schematics made, I could begin incrementally assembling and testing the circuitry. First, I tested all components individually to make sure they were within tolerance and/or functioned correctly, including LEDs, resistors, and a button. Then, I added all the components needed for power delivery. I wanted to make sure that the 12VDC from the car battery was being reduced to 5V and 3.3V properly before adding other components.</p>
+					<p class="about-me-paragraph">With the schematics made, I could begin incrementally assembling and testing the circuitry. First, I tested all components individually to make sure they were within tolerance and/or functioned correctly, including LEDs, resistors, and a button. Then, I added all the components needed for power delivery. I wanted to make sure that the 12VDC from the car battery was being reduced to 5V and 3.3V properly before adding other components.</p>
 					<figure>
 						<img src="/img/senior-project-5V.webp" alt="A multimeter reading 5.05V.">
 						<figcaption>Testing the 5V power source.</figcaption>
@@ -155,7 +155,7 @@
 						<img src="/img/senior-project-3-3V.webp" alt="A multimeter reading 3.313V.">
 						<figcaption>Testing the 3.3V power source.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">Once the rest of the OBD-II transceiver circuit was assembled, I used an oscilloscope to make sure the 3.3V and 5V logic level translation was working correctly (the ESP32 uses 3.3V logic while the ELM327 uses the older 5V logic.) Once I was sure everything worked as expected, I tested the circuit on the car with a wired serial connection before attempting Bluetooth communication.</p>
+					<p class="about-me-paragraph">Once the rest of the OBD-II transceiver circuit was assembled, I used an oscilloscope to make sure the 3.3V and 5V logic level translation was working correctly (the ESP32 uses 3.3V logic while the ELM327 uses the older 5V logic.) Once I was sure everything worked as expected, I tested the circuit on the car with a wired serial connection before attempting Bluetooth communication.</p>
 					<figure>
 						<img src="/img/senior-project-3-3V-to-5V-translation.webp" alt="An oscilloscope reading.">
 						<figcaption>Reading the signal after translating from 3.3V to 5V, noisy but tolerable.</figcaption>
@@ -169,7 +169,7 @@
 						<img src="/img/senior-project-changing-baud-rate.webp" alt="A screenshot of a PuTTY terminal.">
 						<figcaption>Testing the OBD-II interpreter and changing the baud rate.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">With the circuitry assembled, I started working more on the handheld Raspberry Pi module. Previously, I researched many different ways to power the Pi, and eventually decided on a uninterruptable power supply (UPS) hat. Using this method, the Pi could safely shutdown automatically when the battery voltage dropped too low, and the rechargeable battery would last at least 2 hours.</p>
+					<p class="about-me-paragraph">With the circuitry assembled, I started working more on the handheld Raspberry Pi module. Previously, I researched many different ways to power the Pi, and eventually decided on a uninterruptable power supply (UPS) hat. Using this method, the Pi could safely shutdown automatically when the battery voltage dropped too low, and the rechargeable battery would last at least 2 hours.</p>
 					<figure>
 						<img src="/img/senior-project-ups-pi.webp" alt="A Raspberry Pi 4 connected to a UPS hat and touchscreen.">
 						<figcaption>The UPS hat mounted to the back of the touchscreen, both connected to a Raspberry Pi 4.</figcaption>
@@ -177,7 +177,7 @@
 						<img src="/img/senior-project-ups-pi-powered.webp" alt="A powered Raspberry Pi 4 connected to a touchscreen.">
 						<figcaption>The Raspberry Pi 4 powered by the UPS hat.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">Initially, I decided to use default Raspberry Pi OS, but later switched to the Lite version after realizing I did not need everything that was included with the default version. I also had to make some minor tweaks to the OS to allow the button to turn the Pi on and off, as well as to allow a GUI on the Lite version of Raspberry Pi OS.</p>
+					<p class="about-me-paragraph">Initially, I decided to use default Raspberry Pi OS, but later switched to the Lite version after realizing I did not need everything that was included with the default version. I also had to make some minor tweaks to the OS to allow the button to turn the Pi on and off, as well as to allow a GUI on the Lite version of Raspberry Pi OS.</p>
 					<p class="about-me-paragraph">At this point, the end of the academic year was approaching, and I still didn't have Bluetooth data transfer or a GUI. Using the examples included in the Arduino IDE, I tested to see if the ESP32 would even connect to the Raspberry Pi with Bluetooth. The connection worked, but it was just a connection with no data transfer. I also got started on the general layout of the user interface using <a href="https://pypi.org/project/PySimpleGUI/" target="_blank">PySimpleGUI</a>.</p>
 					<figure>
 						<img src="/img/senior-project-bluetooth-connection.webp" alt="A screenshot of a Linux terminal.">
@@ -186,7 +186,7 @@
 						<img src="/img/senior-project-touchscreen-gui.webp" alt="A powered Raspberry Pi 4 connected to a touchscreen.">
 						<figcaption>The touchscreen GUI layout on the Pi 4.</figcaption>
 					</figure>
-					<p class ="about-me-paragraph">I presented my project as it was, demonstrating the communication with the car through a wired serial connection. There was enough functionality and progress made to consider the project a success, but it still didn't live up to my expectations.</p>
+					<p class="about-me-paragraph">I presented my project as it was, demonstrating the communication with the car through a wired serial connection. There was enough functionality and progress made to consider the project a success, but it still didn't live up to my expectations.</p>
 					<figure>
 						<img src="/img/senior-project-talking-to-car-demo.webp" alt="A screenshot of a PuTTY terminal.">
 						<figcaption>The demonstration of communicating with my car including decoded results.</figcaption>
