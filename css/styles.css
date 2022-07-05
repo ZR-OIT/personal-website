@@ -1,7 +1,7 @@
 /* Zak Rowland, 2022 */
 
 :root {
-	--border-margin: 4px;
+	--border-padding: 8px;
 
 	--primary: #1A3A48; /* Dark blue-green */
 	--primary-light: #255266;
@@ -31,10 +31,7 @@
 	--resume-btn: var(--accent-light);
 	--resume-btn-shadow: var(--accent-dark);
 
-	--heading-one: white;
-	--heading-two: var(--primary-complement);
-
-	--default-text: black;
+	--default-paragraph: black;
 	--default-heading: black;
 }
 
@@ -44,7 +41,7 @@
 @media screen and (max-width: 480px) {
 	
 	p {
-		color: var(--default-text);
+		color: var(--default-paragraph);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 1em;
 		font-style: normal;
@@ -52,22 +49,22 @@
 		margin: 0;
 	}
 
-	h1 {
-		color: var(--heading-one);
+	h1 { /* Reserved for site title */
+		color: white;
 		font-family:  "Quicksand", sans-serif;
-		font-size: 2em;
-		font-style: normal;
+		font-size: clamp(24px, 6vw, 32px);
 		font-weight: 600;
 		margin: 0;
+		padding: 0;
 	}
 
-	h2 {
-		color: var(--heading-two);
+	h2 { /* Reserved for site description / subtitle */
+		color: var(--primary-complement);
 		font-family:  "Quicksand", sans-serif;
-		font-size: 1.2em;
-		font-style: normal;
+		font-size: clamp(16px, 4vw, 24px);
 		font-weight: 400;
 		margin: 0;
+		padding: 0;
 	}
 
 	h3 {
@@ -87,7 +84,7 @@
 		font-style: normal;
 		font-weight: 600;
 		margin: 0;
-		padding-bottom: var(--border-margin);
+		padding-bottom: var(--border-padding);
 		text-decoration: underline;
 	}
 
@@ -131,7 +128,7 @@
 	}
 
 	li {
-		color: var(--default-text);
+		color: var(--default-paragraph);
 		font-family:  "Quicksand", sans-serif;
 		font-size: 0.9em;
 		font-style: normal;
@@ -202,25 +199,24 @@
 
 		header {
 			background: var(--primary);
+			box-sizing: border-box;
 			display: flex;
-			height: 20vh;
-			max-height: 130px;
-			min-height: 100px;
-			padding: var(--border-margin);
+			height: clamp(120px, 20vh, 140px);
+			padding: var(--border-padding);
 		}
 
 			#title-column {
+				box-sizing: border-box;
 				display: flex;
 				flex-direction: column;
 				height: 100%;
-				padding-right: var(--border-margin);
+				padding-right: var(--border-padding);
 				width: 70%;
 			}
 
 				#title-row {
 					align-items: flex-end;
 					display: flex;
-					font-size: 100%;
 					height: 50%;
 					width: 100%;
 				}
@@ -228,17 +224,13 @@
 				#subtitle-row {
 					align-items: flex-start;
 					display: flex;
-					font-size: 100%;
 					height: 50%;
-					padding-bottom: 8px;
+					padding-bottom: var(--border-padding);
 					width: 100%;
 				}
 
 			#nav-column {
-				align-self: center;
-				display: inline-flex;
-				height: 100%;
-				justify-content: right;
+				display: flex;
 				width: 30%;
 			}
 
@@ -248,7 +240,7 @@
 
 				#mobile-nav-container {
 					align-items: center;
-					display: inline-flex;
+					display: flex;
 					height: 100%;
 					justify-content: right;
 					width: 100%;
@@ -263,13 +255,13 @@
 						cursor: pointer;
 						display: flex;
 						justify-content: center;
-						height: 80px;
+						height: clamp(75px, 20vw, 85px);
 						padding: 16px 16px;
-						width: 80px;
+						width: clamp(75px, 20vw, 85px);
 					}
 
 						#dropdown-icon {
-							max-width: 80%;
+							max-width: 70%;
 						}
 
 	/****************************************************************/
@@ -312,7 +304,7 @@
 						font-weight: 600;
 						height: 3em;
 						justify-content: center;
-						margin-bottom: var(--border-margin);
+						margin-bottom: var(--border-padding);
 						padding: 16px 16px;
 						text-align: center;
 						text-decoration: none;
@@ -338,7 +330,7 @@
 						justify-content: right;
 						display: flex;
 						height: 100%;
-						padding-right: var(--border-margin);
+						padding-right: var(--border-padding);
 						width: 25%;
 					}
 
@@ -357,8 +349,8 @@
 						justify-content: left;
 						display: flex;
 						height: 100%;
-						padding-left: var(--border-margin);
-						padding-right: var(--border-margin);
+						padding-left: var(--border-padding);
+						padding-right: var(--border-padding);
 						width: 25%;
 					}
 
@@ -366,7 +358,7 @@
 							align-self: center;
 							color: var(--bg);
 							display: inline-flex;
-							font-size: 1.25em;
+							font-size: clamp(20px, 5vw, 36px);
 							padding-left: 4px;
 						}
 
@@ -375,7 +367,7 @@
 						display: flex;
 						height: 100%;
 						justify-content: center;
-						padding-left: var(--border-margin);
+						padding-left: var(--border-padding);
 						width: 50%;
 					}
 
@@ -418,7 +410,7 @@
 					}
 
 					.about-me-paragraph {
-						color: var(--default-text);
+						color: var(--default-paragraph);
 						font-family:  "Quicksand", sans-serif;
 						font-size: 1em;
 						font-style: normal;
@@ -493,7 +485,7 @@
 							cursor: pointer;
 							display: flex;
 							font-family:  "Quicksand", sans-serif;
-							font-size: calc(12px + 2vw);
+							font-size: clamp(18px, 5vw, 36px);
 							font-style: normal;
 							font-weight: 600;
 							justify-content: center;
@@ -545,7 +537,7 @@
  ********************************************************************/
 @media screen and (min-width: 1024px) {
 	p {
-		color: var(--default-text-color);
+		color: var(--default-paragraph);
 		margin: 0;
 	}
 
