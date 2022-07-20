@@ -433,12 +433,12 @@
 						justify-content: center;
 						margin-bottom: 8px;
 						text-align: center;
-						width: 90%;
+						width: 85%;
 					}
 
 						#projects-cta {
 							font-family: "Quicksand", sans-serif;
-							font-size: 1.2em;
+							font-size: 20px;
 							font-style: normal;
 							font-weight: 400;
 							margin: 0;
@@ -447,7 +447,7 @@
 						#projects-link {
 							color:  var(--primary);
 							font-family: "Quicksand", sans-serif;
-							font-size: 1.2em;
+							font-size: 20px;
 							font-style: normal;
 							font-weight: 400;
 							margin: 0;
