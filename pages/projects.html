@@ -1,7 +1,7 @@
 <!-- Zak Rowland, 2022 -->
 <!doctype html>
 <html lang="en">
-	<!-- HEAD ------------------------------------------------------------------------------->
+	<!---------- HEAD ---------->
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,33 +23,19 @@
 		<link rel="stylesheet" href="/css/styles.css?v=1.0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 	</head>
-	<!-- END HEAD --------------------------------------------------------------------------->
-	<!-- BODY ------------------------------------------------------------------------------->
+	<!---------- END HEAD ---------->
+	<!---------- BODY ---------->
 	<body>
-		<!-- HEADER ------------------------------------------------------------------------->
+		<!---------- HEADER ---------->
 		<header id="top">
-			<div id="title-column">
-				<div id="title-row">
-					<h1>Zak Rowland</h1>
-				</div><div id="subtitle-row">
-					<h2>B.S. in Computer <br>Engineering Technology</h2>
-				</div>
-			</div><div id="nav-column">
-				<div id="desktop-nav-container">
-						<a href="index.html" class="nav-button">HOME</a>
-						<a href="pages/about.html" class="nav-button">ABOUT ME</a>
-						<a href="pages/projects.html" class="nav-button">PROJECTS</a>
-						<a href="pages/3d-printing" class="nav-button">3D PRINTING</a>
-				</div>
-				<div id="mobile-nav-container">
-					<button id="mobile-nav-button" onclick="toggleDropdown()">
-						<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon">
-					</button>
-				</div>
-			</div>
+			<h1 id="site-title">Zak Rowland</h1>
+			<h2 id="site-subtitle">B.S. in Computer <br>Engineering Technology</h2>
+			<button id="mobile-nav-button" onclick="toggleDropdown()">
+				<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon.">
+			</button>
 		</header>
-		<!-- END HEADER --------------------------------------------------------------------->
-		<!-- MAIN --------------------------------------------------------------------------->
+		<!---------- END HEADER ---------->
+		<!---------- MAIN ---------->
 		<main>
 			<div id="desktop-layout">
 				<div id="left-sidebar">
@@ -201,15 +187,15 @@
 				</div>
 			</div>
 		</main>
-		<!-- END MAIN ----------------------------------------------------------------------->
-		<!-- FOOTER ------------------------------------------------------------------------->
+		<!---------- END MAIN ---------->
+		<!---------- FOOTER ---------->
 		<footer>
 			<p id="footer-text">This website is licensed under a <br><a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" id="license-link">Creative Commons Zero 1.0 Universal License</a>.</p>
 		</footer>
-		<!-- END FOOTER --------------------------------------------------------------------->
+		<!---------- END FOOTER ---------->
 	</body>
-	<!-- END BODY --------------------------------------------------------------------------->
-	<!-- SCRIPT ----------------------------------------------------------------------------->
+	<!---------- END BODY ---------->
+	<!---------- SCRIPT ---------->
 	<script type="text/javascript">
 		function toggleDropdown() {
 			var button = document.getElementById("mobile-nav-button");
@@ -221,5 +207,5 @@
 			}
 		}
 	</script>
-	<!-- END SCRIPT ------------------------------------------------------------------------->
+	<!---------- END SCRIPT ---------->
 </html>
