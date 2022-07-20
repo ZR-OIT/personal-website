@@ -494,7 +494,7 @@
 			background: var(--primary);
 			display: flex;
 			justify-content: center;
-			min-height: 64px;
+			min-height: 72px;
 			text-align: center;
 		}
 
