@@ -132,10 +132,9 @@
 	li {
 		color: var(--default-paragraph);
 		font-family:  "Quicksand", sans-serif;
-		font-size: 0.9em;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: 400;
-		padding-right: 16px;
 	}
 
 	button {
@@ -392,8 +391,9 @@
 					width: 100%;
 				}
 
-					#about-me-list {
-						font-size: 1.25em;
+					.list-container {
+						padding-left: 16px;
+						padding-right: 32px;
 					}
 
 					.about-me-paragraph {
