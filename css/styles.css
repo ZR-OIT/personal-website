@@ -52,19 +52,19 @@
 	h1 { /* Reserved for site title */
 		color: white;
 		font-family:  "Quicksand", sans-serif;
-		font-size: clamp(24px, 6vw, 32px);
+		font-size: clamp(24px, 7vw, 32px);
 		font-weight: 600;
 		margin: 0;
-		padding: 0;
+		padding-bottom: 4px;
 	}
 
 	h2 { /* Reserved for site description / subtitle */
 		color: var(--primary-complement);
 		font-family:  "Quicksand", sans-serif;
-		font-size: clamp(16px, 4vw, 24px);
+		font-size: clamp(18px, 5vw, 22px);
 		font-weight: 400;
 		margin: 0;
-		padding: 0;
+		padding-bottom: 6px;
 	}
 
 	h3 {
