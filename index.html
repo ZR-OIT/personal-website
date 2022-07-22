@@ -20,11 +20,11 @@
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-		<link rel="stylesheet" href="css/styles.css?v=1.0">
+		<link rel="stylesheet" href="/css/styles.css?v=1.0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-		<link rel="prefetch" href="pages/about.html">
-		<link rel="prefetch" href="pages/projects.html">
-		<link rel="prefetch" href="pages/3d-printing.html">
+
+		<link rel="prefetch" href="/pages/about.html">
+		<link rel="prefetch" href="/pages/projects.html">
 
 		<script type="text/javascript" src="/js/dropdown.js"></script>
 	</head>
@@ -53,27 +53,12 @@
 		<!---------- END HEADER ---------->
 		<!---------- MAIN ---------->
 		<main>
-			<div id="desktop-layout">
-				<div id="left-sidebar">
-					<div id="left-sidebar-portrait">
-						<figure>
-							<img src="img/portrait-placeholder.png" alt="Portrait placeholder">
-							<figcaption>Hi, I'm Zak!</figcaption>
-						</figure>
-					</div>
-				</div><div id="main-content">
-					<h1> This is the main section </h1>
-				</div>
-			</div><div id="mobile-layout">
-				<div id="mobile-topbar">
-					<div id="mobile-portrait-container">
-						<img id="mobile-portrait-img" src="img/portrait.webp" alt="Portrait of Zak Rowland">
-					</div><div id="mobile-portrait-text-container">
-						<p id="mobile-portrait-text">Hi, <br>I'm Zak!</p>
-					</div><div id="mobile-resume-button-container">
-						<button href="/docs/Resume.pdf" download="Resume" target="_blank" id="mobile-resume-button">My Résumé</button>
-					</div>
-				</div><div id="mobile-main-content">	
+			<div id="main-content">
+				<div id="resume-bar">
+					<img id="portrait" src="/img/portrait.webp" alt="Portrait of Zak Rowland.">
+					<p id="portrait-text">Hi, <br>I'm Zak!</p>
+					<button href="/docs/Resume.pdf" download="Resume" target="_blank" id="resume-button">My Résumé</button>
+				</div><div id="content-wrapper">
 					<h3>A short introduction</h3>
 					<div class="list-container">
 						<ul>
@@ -83,23 +68,24 @@
 						</ul>
 					</div>
 					<figure>
-						<img src="img/senior-project-main-circuit.webp" alt="Main circuit of senior project">
+						<img src="/img/senior-project-main-circuit.webp" alt="Main circuit of senior project">
 						<figcaption>The main circuit of my senior project.</figcaption>
 					</figure>
 					<figure>
-						<img src="img/senior-project-obd-transceiver-schematic.webp" alt="Schematic for main circuit of senior project">
+						<img src="/img/senior-project-obd-transceiver-schematic.webp" alt="Schematic for main circuit of senior project">
 						<figcaption>The schematic for the main circuit of my senior project.</figcaption>
 					</figure>
 					<figure>
-						<img src="img/south-dakota-trip.webp" alt="Feeding prairie dogs in South Dakota">
+						<img src="/img/south-dakota-trip.webp" alt="Feeding prairie dogs in South Dakota">
 						<figcaption>Feeding prairie dogs in South Dakota.</figcaption>
 					</figure>
 					<figure>
-						<img src="img/minecraft-mopop-seattle.webp" alt="Minecraft exhibit at the Museum of Pop Culture">
+						<img src="/img/minecraft-mopop-seattle.webp" alt="Minecraft exhibit at the Museum of Pop Culture">
 						<figcaption>Minecraft exhibit at the Museum of Pop Culture in Seattle.</figcaption>
 					</figure>
-					<div id="projects-cta-container"><p id="projects-cta">Find out more about all of my projects <a href="https://zak-rowland.com/projects" target="_blank" id="projects-link">here</a>.</p></div>
-					<div id="btt-button-container">
+					<div id="projects-cta-container">
+						<p id="projects-cta">Find out more about all of my projects <a href="/pages/projects.html" id="projects-link">here</a>.</p>
+					</div><div id="btt-button-container">
 						<button href="#top" id="btt-button">Back to top ↑</button>
 					</div>
 				</div>
