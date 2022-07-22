@@ -25,6 +25,8 @@
 		<link rel="prefetch" href="pages/about.html">
 		<link rel="prefetch" href="pages/projects.html">
 		<link rel="prefetch" href="pages/3d-printing.html">
+
+		<script type="text/javascript" src="/js/dropdown.js"></script>
 	</head>
 	<!---------- END HEAD ---------->
 	<!---------- BODY ---------->
@@ -38,12 +40,15 @@
 					<h2>B.S. in Computer <br>Engineering Technology</h2>
 				</div>
 			</div><div id="nav-column">
-
+				<button id="mobile-nav-button" onclick="toggleDropdown()">
+					<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon.">
+				</button><div id="mobile-nav-dropdown">
+					<a href="/index.html"><button class="mobile-nav-dropdown-button">HOME</button></a>
+					<a href="/pages/about.html"><button class="mobile-nav-dropdown-button">ABOUT ME</button></a>
+					<a href="/pages/projects.html"><button class="mobile-nav-dropdown-button">MY PROJECTS</button></a>
+					<a href="/pages/3d-printing.html"><button class="mobile-nav-dropdown-button">3D PRINTING</button></a>
+				</div>
 			</div>
-			<!--
-			<button id="mobile-nav-button" onclick="toggleDropdown()">
-				<img id="dropdown-icon" src="img/drop-down-icon.png" alt="Dropdown list icon.">
-			</button> -->
 		</header>
 		<!---------- END HEADER ---------->
 		<!---------- MAIN ---------->
@@ -60,12 +65,7 @@
 					<h1> This is the main section </h1>
 				</div>
 			</div><div id="mobile-layout">
-				<div id="mobile-nav-dropdown">
-					<a href="/index.html"><button class="mobile-nav-dropdown-button">HOME</button></a>
-					<a href="/pages/about.html"><button class="mobile-nav-dropdown-button">ABOUT ME</button></a>
-					<a href="/pages/projects.html"><button class="mobile-nav-dropdown-button">MY PROJECTS</button></a>
-					<a href="/pages/3d-printing.html"><button class="mobile-nav-dropdown-button">3D PRINTING</button></a>
-				</div><div id="mobile-topbar">
+				<div id="mobile-topbar">
 					<div id="mobile-portrait-container">
 						<img id="mobile-portrait-img" src="img/portrait.webp" alt="Portrait of Zak Rowland">
 					</div><div id="mobile-portrait-text-container">
@@ -113,17 +113,4 @@
 		<!---------- END FOOTER ---------->
 	</body>
 	<!---------- END BODY ---------->
-	<!---------- SCRIPT ---------->
-	<script type="text/javascript">
-		function toggleDropdown() {
-			var button = document.getElementById("mobile-nav-button");
-			var dropdown = document.getElementById("mobile-nav-dropdown")
-			if (dropdown.style.display === "flex") {
-				dropdown.style.display = "none";
-			} else {
-				dropdown.style.display = "flex";
-			}
-		}
-	</script>
-	<!---------- END SCRIPT ---------->
 </html>

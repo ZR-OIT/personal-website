@@ -22,17 +22,30 @@
 
 		<link rel="stylesheet" href="/css/styles.css?v=1.0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+
+		<script type="text/javascript" src="/js/dropdown.js"></script>
 	</head>
 	<!---------- END HEAD ---------->
 	<!---------- BODY ---------->
 	<body>
 		<!---------- HEADER ---------->
 		<header id="top">
-			<h1 id="site-title">Zak Rowland</h1>
-			<h2 id="site-subtitle">B.S. in Computer <br>Engineering Technology</h2>
-			<button id="mobile-nav-button" onclick="toggleDropdown()">
-				<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon.">
-			</button>
+			<div id="title-column">
+				<div id="title-row">
+					<h1>Zak Rowland</h1>
+				</div><div id="subtitle-row">
+					<h2>B.S. in Computer <br>Engineering Technology</h2>
+				</div>
+			</div><div id="nav-column">
+				<button id="mobile-nav-button" onclick="toggleDropdown()">
+					<img id="dropdown-icon" src="/img/drop-down-icon.png" alt="Dropdown list icon.">
+				</button><div id="mobile-nav-dropdown">
+					<a href="/index.html"><button class="mobile-nav-dropdown-button">HOME</button></a>
+					<a href="/pages/about.html"><button class="mobile-nav-dropdown-button">ABOUT ME</button></a>
+					<a href="/pages/projects.html"><button class="mobile-nav-dropdown-button">MY PROJECTS</button></a>
+					<a href="/pages/3d-printing.html"><button class="mobile-nav-dropdown-button">3D PRINTING</button></a>
+				</div>
+			</div>
 		</header>
 		<!---------- END HEADER ---------->
 		<!---------- MAIN ---------->
@@ -139,17 +152,4 @@
 		<!---------- END FOOTER ---------->
 	</body>
 	<!---------- END BODY ---------->
-	<!---------- SCRIPT ---------->
-	<script type="text/javascript">
-		function toggleDropdown() {
-			var button = document.getElementById("mobile-nav-button");
-			var dropdown = document.getElementById("mobile-nav-dropdown")
-			if (dropdown.style.display === "flex") {
-				dropdown.style.display = "none";
-			} else {
-				dropdown.style.display = "flex";
-			}
-		}
-	</script>
-	<!---------- END SCRIPT ---------->
 </html>
