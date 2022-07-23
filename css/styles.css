@@ -2,7 +2,7 @@
 
 :root {
 	--border-padding: 8px;
-	--main-padding: 32px;
+	--main-padding: 16px;
 
 	--primary: #1A3A48; /* Dark blue-green */
 	--primary-light: #255266;
@@ -48,7 +48,7 @@
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
-		padding-top: 16px;
+		padding-top: var(--main-padding);
 		text-align: center;
 	}
 
@@ -77,7 +77,7 @@
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
-		padding-top: 16px;
+		padding-top: var(--main-padding);
 		text-align: center;
 		text-decoration: underline;
 	}
@@ -115,8 +115,10 @@
 	
 	figure {
 		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
 		margin: 0;
-		padding-bottom: var(--main-padding);
+		padding-top: var(--main-padding);
 	}
 
 	figure img {
@@ -246,7 +248,7 @@
 					box-shadow: 0px 4px var(--mobile-nav-btn-shadow);
 					cursor: pointer;
 					height: clamp(75px, 20vw, 85px);
-					padding: 16px 16px;
+					padding: var(--main-padding);
 					width: clamp(75px, 20vw, 85px);
 				}
 
@@ -283,7 +285,7 @@
 						height: 3em;
 						justify-content: center;
 						margin-bottom: var(--border-padding);
-						padding: 16px 16px;
+						padding: var(--main-padding);
 						text-align: center;
 						text-decoration: none;
 						width: 100%;
@@ -367,13 +369,13 @@
 
 				#content-wrapper {
 					box-sizing: border-box;
-					padding-left: var(--main-padding);
-					padding-right: var(--main-padding);
+					padding-left: 32px;
+					padding-right: 32px;
 				}
 				
 					.list-container ul {
 						margin: 0;
-						padding: 16px 0px var(--main-padding) 16px;
+						padding: var(--main-padding) 0px 0px var(--main-padding);
 					}
 
 					#projects-cta {
@@ -382,7 +384,7 @@
 						font-style: normal;
 						font-weight: 400;
 						margin: 0;
-						padding: 0;
+						padding-top: var(--main-padding);
 					}
 					
 					#btt-button-container {
@@ -421,9 +423,16 @@
 						border: 2px solid var(--bg-dark);
 						border-radius: 16px;
 						box-sizing: border-box;
-						margin-top: 16px;
+						margin-top: var(--main-padding);
 						padding: 8px;
 						text-align: center;
+					}
+
+					.project-heading {
+						padding-bottom: 0px;
+						padding-top: var(--main-padding);
+						text-align: center;
+						text-decoration: none;
 					}
 			/*
 			#desktop-layout {
@@ -596,10 +605,12 @@
 
 		footer {
 			align-items: center;
+			box-sizing: border-box;
 			background: var(--primary);
 			display: flex;
 			justify-content: center;
-			min-height: 72px;
+			padding-bottom: var(--main-padding);
+			height: 72px;
 			text-align: center;
 		}
 
