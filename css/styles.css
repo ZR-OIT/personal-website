@@ -48,7 +48,7 @@
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
-		padding: 8px 16px 8px 16px;
+		padding-top: 16px;
 		text-align: center;
 	}
 
@@ -77,7 +77,7 @@
 		font-style: normal;
 		font-weight: 400;
 		margin: 0;
-		padding-bottom: 16px;
+		padding-top: 16px;
 		text-align: center;
 		text-decoration: underline;
 	}
@@ -367,12 +367,13 @@
 
 				#content-wrapper {
 					box-sizing: border-box;
-					padding: var(--main-padding);
+					padding-left: var(--main-padding);
+					padding-right: var(--main-padding);
 				}
 				
 					.list-container ul {
 						margin: 0;
-						padding: 0px 0px var(--main-padding) 16px;
+						padding: 16px 0px var(--main-padding) 16px;
 					}
 
 					#projects-cta-container {
@@ -390,9 +391,11 @@
 						}
 					
 					#btt-button-container {
-					display: flex;
-					justify-content: center;
-					text-align: center;
+						box-sizing: border-box;
+						display: flex;
+						justify-content: center;
+						padding-bottom: var(--main-padding);
+						text-align: center;
 				}
 
 					#btt-button {
