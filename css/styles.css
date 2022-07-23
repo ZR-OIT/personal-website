@@ -376,25 +376,21 @@
 						padding: 16px 0px var(--main-padding) 16px;
 					}
 
-					#projects-cta-container {
-						box-sizing: border-box;
-						padding-bottom: var(--main-padding);
+					#projects-cta {
+						font-family: "Quicksand", sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 400;
+						margin: 0;
+						padding: 0;
 					}
-
-						#projects-cta {
-							font-family: "Quicksand", sans-serif;
-							font-size: 20px;
-							font-style: normal;
-							font-weight: 400;
-							margin: 0;
-							padding: 0;
-						}
 					
 					#btt-button-container {
 						box-sizing: border-box;
 						display: flex;
 						justify-content: center;
 						padding-bottom: var(--main-padding);
+						padding-top: var(--main-padding);
 						text-align: center;
 				}
 
@@ -418,6 +414,16 @@
 						text-align: center;
 						text-decoration: none;
 						width: 100%;
+					}
+				
+					.experience-entry {
+						background-color: var(--bg-light);
+						border: 2px solid var(--bg-dark);
+						border-radius: 16px;
+						box-sizing: border-box;
+						margin-top: 16px;
+						padding: 8px;
+						text-align: center;
 					}
 			/*
 			#desktop-layout {
