@@ -357,6 +357,8 @@
 
 				#content-wrapper {
 					box-sizing: border-box;
+					display: grid;
+					grid-template-columns: 1fr;
 					padding-left: 32px;
 					padding-right: 32px;
 				}
